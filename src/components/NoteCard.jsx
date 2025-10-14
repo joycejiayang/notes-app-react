@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './NoteCard.css'
+import hollowStar from '../assets/hollow-star.svg'
+import filledStar from '../assets/filled-star.svg'
 
 
 function NoteCard() {
@@ -7,9 +9,9 @@ function NoteCard() {
         <article className="note-entry">
             <h3 className="note-title">Random Thoughts that Keep Me Up at Night</h3>
             <div className="stars">
-                <img src="icons/hollow-star.svg" />
-                <img src="icons/filled-star.svg" />
-                <img src="icons/filled-star.svg" />
+                <img src={hollowStar} />
+                <img src={filledStar} />
+                <img src={filledStar} />
             </div>
             <div className="note-preview">
                 <ol>

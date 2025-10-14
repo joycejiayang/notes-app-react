@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import NoteCard from './components/NoteCard'
+import Nav from './components/Nav'
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <NoteCard />
         <NoteCard />
       </main>
+      
+      <Nav />
     </>
   )
 }

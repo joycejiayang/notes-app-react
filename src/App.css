@@ -1,33 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  /* Variables */
-  --pale-purple: #E6E6F8;
-  --dark-blue: #083086;
-  --vibrant-pink: #DE217D;
-  --dark-gray: #2E2E32;
-  --white-25: rgba(255, 255, 255, 0.25);
-  --black-25: rgba(0, 0, 0, 0.25);
-  --black-40: rgba(0, 0, 0, 0.4);
-  --black-65: rgba(0, 0, 0, 0.65);
-}
-
-body {
-  background-color: black;
-  font-family: "Be Vietnam Pro", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-}
-
 #root {
   background-color: var(--pale-purple);
   width: clamp(320px, 100vw, 440px);
@@ -35,6 +5,14 @@ body {
   display: block;
   position: absolute;
   overflow-y: scroll;
+  scrollbar-width: none; /* hides scrollbar */
+  -ms-overflow-style: none; /* hides scrollbar in IE 10+ */
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+#root::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* optional, just makes it invisible */
 }
 
 main#content {
@@ -42,6 +20,7 @@ main#content {
   flex-direction: column;
   gap: 0.938rem;
   padding: 1.25rem;
+  margin-bottom: 6.563rem; /* offset nav */
 }
 
 main#content * {
