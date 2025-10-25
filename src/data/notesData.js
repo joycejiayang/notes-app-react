@@ -14,7 +14,7 @@ const notesData = [
         id: 2,
         title: "Positive Affirmations",
         content: `<ol>
-                    <li>Progress, not perfection, is still a win. Baby stps WILL get me there.</li>
+                    <li>Progress, not perfection, is still a win. Baby steps WILL get me there.</li>
                     <li>I am resilient and capable of handling whatever comes my way.</li>
                 </ol>`,
         date: "Sep 15, 2024",
