@@ -14,7 +14,9 @@
   --white-25: rgba(255, 255, 255, 0.25);
   --black-25: rgba(0, 0, 0, 0.25);
   --black-40: rgba(0, 0, 0, 0.4);
+  --black-40-hex: #8A8A95;
   --black-65: rgba(0, 0, 0, 0.65);
+  --black-65-hex: #515157;
 }
 
 * {
@@ -25,6 +27,7 @@
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   background-color: black;
+  color: var(--dark-gray);
   display: flex;
   justify-content: center;
   align-items: center;

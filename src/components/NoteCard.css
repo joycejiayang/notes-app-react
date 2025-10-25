@@ -1,38 +1,79 @@
 .note-entry {
     background-color: white;
-    padding: 1.25rem;
-    border-radius: 1.375rem;
+    padding: 20px;
+    border-radius: 20px;
     position: relative;
 }
 
 .note-entry .note-title {
-    width: calc(100% - 1.25rem);
-    font-size: 1.063rem;
-    line-height: 1.438rem;
-    padding-bottom: 0.938rem;
+    width: calc(100% - 20px);
+    font-size: 18px;
+    line-height: 28px;
+    position: relative;
+    top: -3px;
+    padding-bottom: 7px;
 }
 
 .note-entry .stars {
     display: flex;
     position: absolute;
-    bottom: 1.063rem;
-    right: 0.938rem;
-    gap: 0.188rem;
+    bottom: 15px;
+    right: 15px;
+    gap: 3px;
 }
 
 .note-entry .note-preview {
-    font-size: 0.938rem;
-    line-height: 1.313rem;
-    width: calc(100% - 1.25rem);
-    max-width: calc(clamp(320px, 100vw, 440px) - 1.25rem - 1.25rem - 1.25rem - 1.25rem);
+    font-size: 15px;
+    line-height: 25px;
+    padding-bottom: 15px;
+    width: calc(100% - 20px);
+    max-width: calc(clamp(320px, 100vw, 440px) - (4 * 20px));
 }
 
-.note-preview ol {
-    padding-inline-start: 1.25rem;
+.note-preview ol, ul {
+    padding-left: 20px;
+}
+
+.note-preview input[type="checkbox"] {
+    display: none;
+}
+
+.note-preview label {
+    position: relative;
+    padding-left: 25px;
+    pointer-events: none;
+}
+
+.note-preview label::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    outline: solid 1px var(--dark-gray);
+    outline-offset: -1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.5px 0;
+}
+
+.note-preview label:has(input[type="checkbox"]:checked) {
+    color: var(--black-40-hex);
+    text-decoration: line-through;
+}
+
+.note-preview label:has(input[type="checkbox"]:checked)::before {
+    content: "✓";
+    color: white;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    outline: none;
+    outline-offset: 0;
+    background-color: var(--vibrant-pink);
 }
 
 .note-entry .time {
-    font-size: 0.813rem;
-    line-height: 0.813rem;
-    padding-top: calc(0.938rem + (1.438rem - 1.063rem) / 2);
+    font-size: 13px;
+    line-height: 13px;
 }
