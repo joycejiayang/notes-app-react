@@ -11,24 +11,15 @@ function App() {
 
   const [allNotes, setAllNotes] = useState(sortedNotes || []);
 
+  /* Updates numStar for a note when the note's star rating changes in StarRating
+   * Do not re-render the notes or else it will cause flickering */
   const updateNumStars = (noteDataId, newStarCount) => {
-    // setAllNotes(prev => {
-    //   // find index of the note to update
-    //   const index = prev.findIndex(note => note.id === noteDataId);
-
-    //   // do nothing if index doesn't exist
-    //   if (index === -1) {
-    //     return prev;
-    //   }
-
-    //   // update note to be changed
-    //   const updatedNotes = [...prev];
-    //   updatedNotes[index] = { ...updatedNotes[index], numStars: newStarCount };
-    //   return updatedNotes;
-    // })
-    setAllNotes(prev => {
-      return prev;
-    })
+    allNotes.forEach(noteData => {
+      if (noteData.id === noteDataId) {
+        noteData.numStars = newStarCount;
+        return;
+      }
+    });
   }
 
   return (

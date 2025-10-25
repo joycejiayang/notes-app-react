@@ -6,6 +6,7 @@ import filledStar from '../assets/filled-star.svg'
 function StarRating({ numStars, onNumStarChange }) {
     const [currStarCount, setStarCount] = useState(numStars || 0);
 
+    /* Implements star toggling/switching logic */
     function handleStarClick(index) {
         console.log('index:', index, 'currStarCount:', currStarCount)
         let newStarCount = currStarCount;
@@ -37,6 +38,7 @@ function StarRating({ numStars, onNumStarChange }) {
         onNumStarChange?.(newStarCount);
     }
 
+    /* Render the stars based on the star toggling/switching logic */
     const starsArray = [];
     if (currStarCount < 3) {
         starsArray.push(
