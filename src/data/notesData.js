@@ -1,14 +1,16 @@
+import candyArt from './candy-art.png';
+
 const notesData = [
     {
         id: 1,
-        title: "Random Thoughts that Keep Me Up at Night",
+        title: "Random thoughts that keep me up at night when I have an epiphany of comedic genius",
         content: `<ul>
                     <li>Why does "phonetically" not sound how it's spelled?</li>
                     <li>What if socks with sandals are just ahead...</li>
                 </ul>`,
-        date: "Oct 24, 2024",
+        date: "Oct 10, 2024",
         numStars: 0,
-        order: 1
+        order: 3
     },
     {
         id: 2,
@@ -18,8 +20,8 @@ const notesData = [
                     <li>I am resilient and capable of handling...</li>
                 </ol>`,
         date: "Sep 15, 2024",
-        numStars: 3,
-        order: 3
+        numStars: 2,
+        order: 4
     },
     {
         id: 3,
@@ -31,7 +33,7 @@ const notesData = [
                 </ul>`,
         date: "Sep 1, 2024",
         numStars: 1,
-        order: 4
+        order: 5
     },
     {
         id: 4,
@@ -47,8 +49,16 @@ const notesData = [
                 <label for="checkboxItem3">
                     <input type="checkbox" id="checkboxItem3" name="checkbox1" value="checkboxItem3" />Yogurt cups
                 </label><br>`,
-        date: "Oct 10, 2024",
-        numStars: 2,
+        date: "2:34 PM",
+        numStars: 3,
+        order: 1
+    },
+    {
+        id: 5,
+        title: "Halloween Prep",
+        content: `<img src="${candyArt}" alt="Candy Art" />`,
+        date: "Oct 24, 2024",
+        numStars: 1,
         order: 2
     }
 ]
