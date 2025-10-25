@@ -65,10 +65,9 @@
 }
 
 .note-preview label:has(input[type="checkbox"]:checked)::before {
-    content: "✓";
+    content: url("../assets/checkmark-small.svg");
     color: white;
-    font-size: 15px;
-    line-height: 20px;
+    line-height: 18px;
     text-align: center;
     outline: none;
     outline-offset: 0;
