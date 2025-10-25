@@ -1,11 +1,11 @@
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 0.938rem clamp(2.063rem, 16vw, 4.375rem) 0;
+    padding: 12px clamp(32px, 16vw, 70px) 0;
     background-color: var(--dark-blue);
-    width: calc(clamp(320px, 100vw, 440px) - (clamp(2.063rem, 16vw, 4.375rem) * 2));
-    height: calc(6.563rem - 0.938rem);
-    bottom: max(calc((100vh - clamp(568px, 100vh, 956px)) / 2), 0px);
+    width: calc(clamp(320px, 100vw, 440px)); /* same width as the phone width */
+    height: 90px;
+    bottom: 0;
     position: fixed;
     z-index: 999;
 }
@@ -14,22 +14,22 @@ nav .menu-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.313rem;
+    gap: 5px;
     width: auto;
     color: var(--pale-purple);
-    font-size: 0.938rem;
+    font-size: 15px;
 }
 
 nav .menu-item--active {
     text-decoration: underline solid var(--pale-purple);
     -webkit-text-decoration: underline solid var(--pale-purple);
-    text-underline-offset: 0.438rem;
-    -webkit-underline-offset: 0.438rem;
+    text-underline-offset: 7px;
+    -webkit-underline-offset: 7px;
 }
 
 nav .menu-item .menu-icon-container {
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
