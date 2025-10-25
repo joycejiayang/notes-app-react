@@ -22,9 +22,12 @@
 .note-entry .stars {
     display: flex;
     position: absolute;
-    bottom: 15px;
-    right: 15px;
-    gap: 3px;
+    bottom: 12px;
+    right: 12px;
+}
+
+.note-entry .stars > img {
+    padding: 3px;
 }
 
 .note-entry .note-preview {

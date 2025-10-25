@@ -1,35 +1,22 @@
 import { useState } from 'react'
 import './NoteCard.css'
-import hollowStar from '../assets/hollow-star.svg'
-import filledStar from '../assets/filled-star.svg'
+import StarRating from "./StarRating"
 
-function NoteCard({ noteData }) {
+function NoteCard({ noteData, onStarRatingChange }) {
+    const handleStarRatingChange = (newStarCount) => {
+        onStarRatingChange(noteData.id, newStarCount)
+    }
+
     return (
         <article className="note-entry">
             <h3 className="note-title">{ noteData.title }</h3>
             <div className="note-preview" dangerouslySetInnerHTML={{ __html: noteData.content }}/>
             <p className="time">{ noteData.date }</p>
-            <div className="stars">
-                { renderStars(noteData.numStars) }
-            </div>
+            <StarRating 
+                numStars={ noteData.numStars }
+                onNumStarChange={ (newStarCount) => handleStarRatingChange(newStarCount) }
+            />
         </article>
-    )
-}
-
-function renderStars(numStars) {
-    const starsArray = [];
-
-    // not sure if I should make the stars clickable in the home page
-    if (numStars < 3) {
-        starsArray.push(<img src={ hollowStar } />);
-    }
-
-    for (let i = 0; i < numStars && i < 3; i++) {
-        starsArray.push(<img src={ filledStar } />);
-    }
-
-    return (
-        starsArray
     )
 }
 
