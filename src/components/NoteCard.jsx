@@ -10,39 +10,26 @@ function NoteCard({ noteData }) {
             <div className="note-preview" dangerouslySetInnerHTML={{ __html: noteData.content }}/>
             <p className="time">{noteData.date}</p>
             <div className="stars">
-                {setStars(noteData.numStars)}
+                {renderStars(noteData.numStars)}
             </div>
         </article>
     )
 }
 
-function setStars(num) {
-    if (num === 1) {
-        return (
-        <>
-            <img src={hollowStar} />
-            <img src={filledStar} />
-        </>
-        )
-    } else if (num === 2) {
-        return (
-        <>
-            <img src={hollowStar} />
-            <img src={filledStar} />
-            <img src={filledStar} />
-        </>
-        )
-    } else if (num === 3) {
-        return (
-        <>
-            <img src={filledStar} />
-            <img src={filledStar} />
-            <img src={filledStar} />
-        </>
-        )
-    } else {
-        return <img src={hollowStar} />;
+function renderStars(numStars) {
+    const starsArray = [];
+
+    if (numStars < 3) {
+        starsArray.push(<img src={hollowStar} />);
     }
+
+    for (let i = 0; i < numStars && i < 3; i++) {
+        starsArray.push(<img src={filledStar} />);
+    }
+
+    return (
+        starsArray
+    )
 }
 
 export default NoteCard

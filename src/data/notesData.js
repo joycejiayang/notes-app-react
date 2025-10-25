@@ -2,10 +2,10 @@ const notesData = [
     {
         id: 1,
         title: "Random Thoughts that Keep Me Up at Night",
-        content: `<ol>
+        content: `<ul>
                     <li>Why does "phonetically" not sound how it's spelled?</li>
                     <li>What if socks with sandals are just ahead of their time?</li>
-                </ol>`,
+                </ul>`,
         date: "Oct 24, 2024",
         numStars: 0,
         order: 1
@@ -13,10 +13,10 @@ const notesData = [
     {
         id: 2,
         title: "Positive Affirmations",
-        content: `<ul>
-                    <li>I am resilient and capable of handling whatever comes my way.</li>
+        content: `<ol>
                     <li>Progress, not perfection, is still a win. Baby stps WILL get me there.</li>
-                </ul>`,
+                    <li>I am resilient and capable of handling whatever comes my way.</li>
+                </ol>`,
         date: "Sep 15, 2024",
         numStars: 3,
         order: 3

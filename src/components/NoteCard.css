@@ -25,9 +25,11 @@
 .note-entry .note-preview {
     font-size: 15px;
     line-height: 25px;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
     width: calc(100% - 20px);
     max-width: calc(clamp(320px, 100vw, 440px) - (4 * 20px));
+    max-height: 80px;
+    overflow: hidden;
 }
 
 .note-preview ol, ul {
@@ -76,4 +78,5 @@
 .note-entry .time {
     font-size: 13px;
     line-height: 13px;
+    padding-top: 15px;
 }
