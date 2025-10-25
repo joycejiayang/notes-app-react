@@ -19,17 +19,6 @@
     max-height: 52px;
 }
 
-.note-entry .stars {
-    display: flex;
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-}
-
-.note-entry .stars > img {
-    padding: 3px;
-}
-
 .note-entry .note-preview {
     font-size: 15px;
     line-height: 25px;
@@ -88,4 +77,10 @@
     font-size: 13px;
     line-height: 13px;
     padding-top: 20px;
+}
+
+.note-entry .stars {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
 }

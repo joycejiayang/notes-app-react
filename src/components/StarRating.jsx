@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './StarRating.css'
 import hollowStar from '../assets/hollow-star.svg'
 import filledStar from '../assets/filled-star.svg'
 

@@ -1,0 +1,11 @@
+.stars {
+    display: flex;
+}
+
+.stars > img {
+    padding: 3px;
+}
+
+.stars > img:hover {
+    cursor: pointer;
+}
