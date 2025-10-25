@@ -18,8 +18,8 @@
 main#content {
   display: flex;
   flex-direction: column;
-  gap: 0.938rem;
-  padding: 1.25rem;
+  gap: 15px;
+  padding: 20px;
   margin-bottom: 6.563rem; /* offset nav */
 }
 

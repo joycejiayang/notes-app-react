@@ -20,9 +20,9 @@ function renderStars(numStars) {
     const starsArray = [];
 
     // not sure if I should make the stars clickable in the home page
-    // if (numStars < 3) {
-    //     starsArray.push(<img src={ hollowStar } />);
-    // }
+    if (numStars < 3) {
+        starsArray.push(<img src={ hollowStar } />);
+    }
 
     for (let i = 0; i < numStars && i < 3; i++) {
         starsArray.push(<img src={ filledStar } />);
