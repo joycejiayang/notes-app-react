@@ -1,10 +1,10 @@
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 8px clamp(32px, 16vw, 70px) 0;
+    padding: 9px clamp(32px, 16vw, 70px) 0;
     background-color: var(--dark-blue);
     width: calc(clamp(320px, 100vw, 440px)); /* same width as the phone width */
-    height: 76px;
+    height: 78px;
     bottom: 0;
     position: fixed;
     z-index: 999;

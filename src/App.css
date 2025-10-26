@@ -20,7 +20,7 @@ main#content {
   flex-direction: column;
   gap: 10px;
   padding: 20px 18px 12px;
-  margin-bottom: 76px; /* offset nav */
+  margin-bottom: 78px; /* offset nav */
 }
 
 main#content * {
