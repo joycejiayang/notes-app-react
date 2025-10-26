@@ -19,8 +19,8 @@ main#content {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px 20px 12px;
-  margin-bottom: 88px; /* offset nav */
+  padding: 20px 18px 12px;
+  margin-bottom: 76px; /* offset nav */
 }
 
 main#content * {

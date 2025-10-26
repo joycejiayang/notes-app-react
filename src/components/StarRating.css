@@ -3,9 +3,10 @@
 }
 
 .stars > img {
-    padding: 3px;
+    /* padding: 3px; */
+    transform: scale(75%);
 }
 
 .stars > img:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
 }

@@ -40,23 +40,23 @@ function StarRating({ numStars, onNumStarChange }) {
 
     /* Render the stars based on the star toggling/switching logic */
     const starsArray = [];
-    if (currStarCount < 3) {
-        starsArray.push(
-        <img
-            key="empty"
-            src={hollowStar}
-            onClick={() => handleStarClick(currStarCount)}
-            alt="empty star"
-        />
-        );
-    }
+    // if (currStarCount < 3) {
+    //     starsArray.push(
+    //     <img
+    //         key="empty"
+    //         src={hollowStar}
+    //         onClick={() => handleStarClick(currStarCount)}
+    //         alt="empty star"
+    //     />
+    //     );
+    // }
 
     for (let i = 0; i < currStarCount; i++) {
         starsArray.push(
         <img
             key={i}
             src={filledStar}
-            onClick={() => handleStarClick(currStarCount - 1 - i)}
+            // onClick={() => handleStarClick(currStarCount - 1 - i)}
             alt="filled star"
         />
         );
