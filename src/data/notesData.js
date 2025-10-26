@@ -6,7 +6,7 @@ const notesData = [
         title: "Random thoughts that keep me up at night when I have an epiphany of comedic genius",
         content: `<ul>
                     <li>Why does "phonetically" not sound how it's spelled?</li>
-                    <li>What if socks with sandals are just ahead...</li>
+                    <li>What if socks with sandals are just ahead of their time?</li>
                 </ul>`,
         date: "Oct 10, 2024",
         numStars: 0,
@@ -17,7 +17,7 @@ const notesData = [
         title: "Positive Affirmations",
         content: `<ol>
                     <li>Progress, not perfection, is still a win. Baby steps WILL get me there.</li>
-                    <li>I am resilient and capable of handling...</li>
+                    <li>I am resilient and capable of handling anything I put my mind to.</li>
                 </ol>`,
         date: "Sep 15, 2024",
         numStars: 2,

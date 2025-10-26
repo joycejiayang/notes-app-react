@@ -1,37 +1,38 @@
 .note-entry {
     background-color: white;
-    padding: 20px;
-    border-radius: 20px;
+    padding: 16px;
+    border-radius: 18px;
     position: relative;
 }
 
 .note-entry .note-title {
     width: 100%;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 24px;
     position: relative;
-    top: -5px; /* makes the actual text align to the corner accounting for line height */
+    top: -4px; /* makes the actual text align to the corner accounting for line height */
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     overflow: hidden;
 }
 
 .note-entry .note-preview {
     position: relative;
-    padding-top: 5px; 
-    /* 5px padding-top of .note-preview
-     * + the -5px top of .note-title 
-     * + 28px line height of .note-title 
-     * = 15px gap between .note-title and .note-preview */
-    font-size: 15px;
-    line-height: 25px;
-    max-height: 80px;
+    padding-top: 4px; 
+    /* 6px padding-top of .note-preview
+     * + the -4px top of .note-title 
+     * + 26px line height of .note-title 
+     * = 12px gap between .note-title and .note-preview */
+    font-size: 14px;
+    line-height: 22px;
+    max-height: 72px;
     overflow: hidden;
 }
 
 .note-preview ol, ul {
-    padding-inline-start: 20px;
+    padding-inline-start: 18px;
 }
 
 .note-preview input[type="checkbox"] {
@@ -46,9 +47,9 @@
 
 .note-preview label::before {
     content: "";
-    width: 18px;
-    height: 18px;
-    border-radius: 18px;
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
     outline: solid 1px var(--dark-gray);
     outline-offset: -1px;
     position: absolute;
@@ -65,7 +66,7 @@
 .note-preview label:has(input[type="checkbox"]:checked)::before {
     content: url("../assets/checkmark-small.svg");
     color: white;
-    line-height: 18px;
+    line-height: 17px;
     text-align: center;
     outline: none;
     outline-offset: 0;
@@ -77,13 +78,14 @@
 }
 
 .note-entry .time {
-    font-size: 13px;
-    line-height: 13px;
-    padding-top: 20px;
+    font-size: 11px;
+    line-height: 11px;
+    padding-top: 16px;
+    color: var(--black-65-hex);
 }
 
 .note-entry .stars {
     position: absolute;
-    bottom: 12px;
-    right: 12px;
+    bottom: 10px;
+    right: 10px;
 }

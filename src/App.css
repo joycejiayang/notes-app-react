@@ -18,9 +18,9 @@
 main#content {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 20px;
-  margin-bottom: 90px; /* offset nav */
+  gap: 10px;
+  padding: 20px 20px 12px;
+  margin-bottom: 88px; /* offset nav */
 }
 
 main#content * {
@@ -29,6 +29,6 @@ main#content * {
 
 h1.page-title {
     font-weight: 400;
-    line-height: 27px;
-    font-size: 27px;
+    line-height: 22px;
+    font-size: 22px;
 }
