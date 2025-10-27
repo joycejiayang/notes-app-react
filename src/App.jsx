@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import NoteCard from './components/NoteCard'
 import Nav from './components/Nav'
+import SearchBar from './components/SearchBar'
 import notesData from './data/notesData'
 
 function App() {
@@ -22,10 +23,19 @@ function App() {
     });
   }
 
+  /* Filter notes by search query */
+  function searchNotes(query) {
+    const filteredNotes = sortedNotes.filter(noteData => {
+      return noteData.title.toLowerCase().includes(query.toLowerCase())
+    });
+    setAllNotes(filteredNotes);
+  }
+
   return (
     <>
       <main id="content">
         <h1 className="page-title">Notes</h1>
+        <SearchBar onSearch={(query) => searchNotes(query)} />
         
         {allNotes.map(noteData => (
           <NoteCard 
