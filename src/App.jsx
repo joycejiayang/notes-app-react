@@ -26,7 +26,7 @@ function App() {
   /* Filter notes by search query */
   function searchNotes(query) {
     const filteredNotes = sortedNotes.filter(noteData => {
-      return noteData.title.toLowerCase().includes(query.toLowerCase())
+      return noteData.title.toLowerCase().includes(query.toLowerCase()) || noteData.content.toLowerCase().includes(query.toLowerCase())
     });
     setAllNotes(filteredNotes);
   }
