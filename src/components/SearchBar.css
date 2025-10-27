@@ -1,6 +1,6 @@
 .top-cover {
     width: calc(clamp(320px, 100vw, 440px) - 36px);
-    height: 50px;
+    height: 48px;
     background-color: var(--pale-purple);
     position: fixed;
     top: 0;
@@ -9,7 +9,9 @@
 
 .top-cover .left-corner, .right-corner {
     position: relative;
-    top: 50px;
+    top: 48px;
+    width: 16px;
+    height: auto;
 }
 
 .top-cover .right-corner {

@@ -37,13 +37,15 @@ function App() {
         <h1 className="page-title">Notes</h1>
         <SearchBar onSearch={(query) => searchNotes(query)} />
         
-        {allNotes.map(noteData => (
-          <NoteCard 
-            key={ noteData.id } 
-            noteData={ noteData }
-            onStarRatingChange={ (newStarCount) => updateNumStars( noteData.id, newStarCount ) }
-          />
-        ))}
+        <div className="notes-list">
+          {allNotes.map(noteData => (
+            <NoteCard 
+              key={ noteData.id } 
+              noteData={ noteData }
+              onStarRatingChange={ (newStarCount) => updateNumStars( noteData.id, newStarCount ) }
+            />
+          ))}
+        </div>
       </main>
       
       <Nav />

@@ -27,6 +27,12 @@ main#content * {
   margin: 0;
 }
 
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 h1.page-title {
     font-weight: 400;
     line-height: 22px;
