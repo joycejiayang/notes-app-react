@@ -1,11 +1,12 @@
 .note-entry {
     background-color: white;
-    padding: 16px;
+    padding: 16px 0;
     border-radius: 18px;
     position: relative;
 }
 
 .note-entry .note-title {
+    padding: 0 16px;
     width: 100%;
     font-size: 16px;
     line-height: 24px;
@@ -20,11 +21,12 @@
 
 .note-entry .note-preview {
     position: relative;
-    padding-top: 4px; 
-    /* 6px padding-top of .note-preview
+    margin-top: 4px;
+    /* 4px margin-top of .note-preview
      * + the -4px top of .note-title 
      * + 26px line height of .note-title 
-     * = 12px gap between .note-title and .note-preview */
+     * = 10px gap between .note-title and .note-preview */
+    padding: 0 16px; 
     font-size: 14px;
     line-height: 22px;
     max-height: 72px;
@@ -80,7 +82,8 @@
 .note-entry .time {
     font-size: 11px;
     line-height: 11px;
-    padding-top: 14px;
+    margin-top: 14px;
+    margin-left: 16px;
     color: var(--black-65-hex);
 }
 

@@ -17,7 +17,7 @@
 
 .header {
   position: fixed;
-  top: 0;
+  top: var(--phone-black-vertical-padding);
   display: flex;
   width: var(--phone-width);
   background-color: var(--pale-purple);

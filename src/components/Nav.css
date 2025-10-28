@@ -5,7 +5,7 @@
     background-color: var(--dark-blue);
     width: var(--phone-width);
     height: 78px;
-    bottom: 0;
+    bottom: var(--phone-black-vertical-padding);
     position: fixed;
     z-index: 999;
 }

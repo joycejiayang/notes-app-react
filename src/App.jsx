@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-      
+
       <header class="header">
         <h1 className="page-title">Notes</h1>
         <SearchBar onSearch={(query) => searchNotes(query)} />
