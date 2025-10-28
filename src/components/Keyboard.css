@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     gap: 6px;
-    max-width: calc(var(--phone-width) - 24px);
+    max-width: calc(var(--phone-width) - 8px);
 }
 
 kbd {
@@ -29,7 +29,7 @@ kbd {
     width: 32px;
     border-radius: 5px;
     font-size: 20px;
-    padding: 9px 0;
+    padding: 8px 0;
     box-shadow: 1px 1px 1px var(--black-25);
 }
 
