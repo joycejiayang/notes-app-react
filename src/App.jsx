@@ -3,6 +3,7 @@ import './App.css'
 import NoteCard from './components/NoteCard'
 import Nav from './components/Nav'
 import SearchBar from './components/SearchBar'
+import Keyboard from './components/Keyboard'
 import notesData from './data/notesData'
 import leftCorner from './assets/left-corner.png'
 import rightCorner from './assets/right-corner.png'
@@ -28,21 +29,22 @@ function App() {
   /* Filter notes by search query */
   function searchNotes(query) {
     const filteredNotes = sortedNotes.filter(noteData => {
-      return noteData.title.toLowerCase().includes(query.toLowerCase()) || noteData.content.toLowerCase().includes(query.toLowerCase())
+      const trimmedQuery = query.toLowerCase().trim();
+      return noteData.title.toLowerCase().includes(trimmedQuery) || noteData.content.toLowerCase().includes(trimmedQuery)
     });
     setAllNotes(filteredNotes);
   }
 
   return (
     <>
-      <section class="header">
+      <header class="header">
         <h1 className="page-title">Notes</h1>
         <SearchBar onSearch={(query) => searchNotes(query)} />
         <div className="corner-coverings" aria-hidden="true">
           <img src={leftCorner} className="corner"/>
           <img src={rightCorner} className="corner"/>
         </div>
-      </section>
+      </header>
 
       <main class="notes-list">
           {allNotes.map(noteData => (
@@ -55,6 +57,8 @@ function App() {
       </main>
       
       <Nav />
+
+      <Keyboard />
     </>
   )
 }

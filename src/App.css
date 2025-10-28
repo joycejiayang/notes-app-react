@@ -29,7 +29,7 @@
   font-weight: 400;
   line-height: 20px;
   font-size: 20px;
-  margin-right: 18px;
+  margin-right: 16px;
   margin-top: 4px;
 }
 
@@ -50,7 +50,7 @@ main.notes-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 8px 18px 12px;
+  padding: 8px 18px 18px;
   margin-top: 51px; /* offset header */
   margin-bottom: 78px; /* offset nav */
 }
