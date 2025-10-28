@@ -21,6 +21,7 @@ function SearchBar({ onSearch }) {
                 className="search-input-area"
                 placeholder="Search"
                 onInput={(e) => handleInput(e)}
+                inputmode="none"
             ></input>
         </div>
         </>
