@@ -1,7 +1,7 @@
 #root {
   background-color: var(--pale-purple);
-  width: clamp(320px, 100vw, 440px);
-  height: clamp(568px, 100vh, 956px);
+  width: var(--phone-width);
+  height: var(--phone-height);
   display: block;
   position: absolute;
   overflow-y: scroll;
@@ -15,27 +15,41 @@
   background: transparent; /* optional, just makes it invisible */
 }
 
-main#content {
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: var(--phone-width);
+  background-color: var(--pale-purple);
+  padding: 18px 18px 8px;
+  z-index: 99;
+}
+
+.header h1.page-title {
+  font-weight: 400;
+  line-height: 25px;
+  font-size: 21px;
+  margin-right: 18px;
+}
+
+.header .corner-coverings {
+  position: absolute;
+  width: calc(100% - 36px);
+  top: 54px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .corner-coverings .corner {
+  width: 16px;
+  height: auto;
+}
+
+main.notes-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px 18px 12px;
+  padding: 8px 18px 12px;
+  margin-top: 51px; /* offset header */
   margin-bottom: 78px; /* offset nav */
-}
-
-main#content * {
-  margin: 0;
-}
-
-.notes-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-h1.page-title {
-    font-weight: 400;
-    line-height: 22px;
-    font-size: 22px;
-    z-index: 98;
 }

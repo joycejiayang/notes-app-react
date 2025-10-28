@@ -6,7 +6,7 @@ import trashIcon from '../assets/trash.svg'
 
 function Nav() {
     return (
-        <nav>
+        <nav className="nav">
             <div className="menu-item menu-item--active">
                 <div className="menu-icon-container">
                     <img src={homeIconActive} />

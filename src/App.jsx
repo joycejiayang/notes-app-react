@@ -4,6 +4,8 @@ import NoteCard from './components/NoteCard'
 import Nav from './components/Nav'
 import SearchBar from './components/SearchBar'
 import notesData from './data/notesData'
+import leftCorner from './assets/left-corner.png'
+import rightCorner from './assets/right-corner.png'
 
 function App() {
   const sortedNotes = [...notesData].sort((a, b) => {
@@ -33,11 +35,16 @@ function App() {
 
   return (
     <>
-      <main id="content">
+      <section class="header">
         <h1 className="page-title">Notes</h1>
         <SearchBar onSearch={(query) => searchNotes(query)} />
-        
-        <div className="notes-list">
+        <div className="corner-coverings" aria-hidden="true">
+          <img src={leftCorner} className="corner"/>
+          <img src={rightCorner} className="corner"/>
+        </div>
+      </section>
+
+      <main class="notes-list">
           {allNotes.map(noteData => (
             <NoteCard 
               key={ noteData.id } 
@@ -45,7 +52,6 @@ function App() {
               onStarRatingChange={ (newStarCount) => updateNumStars( noteData.id, newStarCount ) }
             />
           ))}
-        </div>
       </main>
       
       <Nav />
