@@ -21,7 +21,6 @@
     background-color: transparent;
     width: 100%;
     text-indent: 20px;
-    touch-action: pan-y;
 }
 
 .search-bar .search-input-area::placeholder {
