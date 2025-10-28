@@ -4,7 +4,7 @@
 
 .search-bar .search-icon {
     width: auto;
-    height: 16px;
+    height: 17px;
     position: absolute;
     top: 24px;
     left: auto;
@@ -20,7 +20,7 @@
     border: none;
     background-color: transparent;
     width: 100%;
-    text-indent: 21px;
+    text-indent: 20px;
 }
 
 .search-bar .search-input-area::placeholder {
