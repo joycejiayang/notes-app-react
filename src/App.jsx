@@ -68,8 +68,10 @@ function App() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
       <header className="header">
-        <h1 className="page-title">Notes</h1>
-        <SearchBar onSearch={(query) => searchNotes(query)} onSearchBarClick={ showKeyboard }/>
+        <div className="header-content">
+          <h1 className="page-title">Notes</h1>
+          <SearchBar onSearch={(query) => searchNotes(query)} onSearchBarClick={ showKeyboard }/>
+        </div>
         <div className="corner-coverings" aria-hidden="true">
           <img src={leftCorner} className="corner"/>
           <img src={rightCorner} className="corner"/>

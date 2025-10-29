@@ -30,14 +30,18 @@
 .header {
   position: fixed;
   top: var(--phone-black-vertical-padding);
-  display: flex;
   width: var(--phone-width);
-  background-color: var(--pale-purple);
-  padding: 18px 18px 8px;
   z-index: 99;
 }
 
-.header h1.page-title {
+.header .header-content {
+  padding: 18px 18px 8px;
+  width: 100%;
+  display: flex;
+  background-color: var(--pale-purple);
+}
+
+.header .header-content h1.page-title {
   font-weight: 400;
   line-height: 20px;
   font-size: 20px;
@@ -46,9 +50,8 @@
 }
 
 .header .corner-coverings {
-  position: absolute;
-  width: calc(100% - 36px);
-  top: 52.5px;
+  padding: 0 18px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
