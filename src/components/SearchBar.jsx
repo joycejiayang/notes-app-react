@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './SearchBar.css'
 import searchIcon from '../assets/search.svg'
 
-function SearchBar({ onSearch }) {
+function SearchBar({ onSearch, onSearchBarClick }) {
     const [query, setQuery] = useState('');
 
     useEffect(() => {
@@ -20,7 +20,8 @@ function SearchBar({ onSearch }) {
             <input 
                 id="search-input-area"
                 placeholder="Search"
-                onInput={(e) => handleInput(e)}
+                onInput={ (e) => handleInput(e) }
+                onClick={ onSearchBarClick }
                 inputMode="none"
             ></input>
         </div>

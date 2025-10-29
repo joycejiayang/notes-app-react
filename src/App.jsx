@@ -36,18 +36,20 @@ function App() {
   }
 
   /* Pull up keyboard if input area tapped */
-  function handleKeyboard(e) {
-    const searchbar = document.getElementById("search-input-area");
+  function showKeyboard() {
     const keyboard = document.getElementById("keyboard");
     const screenOverlay = document.getElementById("screen-overlay");
 
-    if (e.target === searchbar) {
-      screenOverlay.style.display = "block";
-      keyboard.style.transform = "translateY(0)";
-    } else {
-      screenOverlay.style.display = "none";
-      keyboard.style.transform = "translateY(100%)";
-    }
+    screenOverlay.style.display = "block";
+    keyboard.style.transform = "translateY(0)";
+  }
+
+  function hideKeyboard() {
+    const keyboard = document.getElementById("keyboard");
+    const screenOverlay = document.getElementById("screen-overlay");
+
+    screenOverlay.style.display = "none";
+    keyboard.style.transform = "translateY(100%)";
   }
 
   /* Setting up the phone width/height dimensions for iPhone Safari browser */
@@ -65,17 +67,17 @@ function App() {
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-      <header className="header" onClick={(e) => handleKeyboard(e)}>
+      <header className="header">
         <h1 className="page-title">Notes</h1>
-        <SearchBar onSearch={(query) => searchNotes(query)} />
+        <SearchBar onSearch={(query) => searchNotes(query)} onSearchBarClick={ showKeyboard }/>
         <div className="corner-coverings" aria-hidden="true">
           <img src={leftCorner} className="corner"/>
           <img src={rightCorner} className="corner"/>
         </div>
-        <div id="screen-overlay"></div>
+        <div id="screen-overlay" onClick={ hideKeyboard }></div>
       </header>
 
-      <main className="notes-list" onClick={(e) => handleKeyboard(e)}>
+      <main className="notes-list">
           {allNotes.map(noteData => (
             <NoteCard 
               key={ noteData.id } 
@@ -85,7 +87,7 @@ function App() {
           ))}
       </main>
       
-      <Nav onClick={(e) => handleKeyboard(e)}/>
+      <Nav />
 
       <Keyboard />
     </>
