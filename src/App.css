@@ -65,7 +65,9 @@
   margin-top: 51px; /* offset header */
   margin-bottom: 78px; /* offset nav */
   min-height: var(--phone-height);
+  height: fit-content;
   position: relative;
+  overflow-y: auto;
 }
 
 #screen-overlay {
