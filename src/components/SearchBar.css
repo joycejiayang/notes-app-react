@@ -36,3 +36,7 @@
     outline-offset: 0.25px;
     caret-color: var(--vibrant-pink);
 }
+
+#search-input-area:focus::placeholder {
+    color: var(--black-40-hex);
+}
