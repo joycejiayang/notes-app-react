@@ -64,6 +64,7 @@ main.notes-list {
   padding: 8px 18px 18px;
   margin-top: 51px; /* offset header */
   margin-bottom: 78px; /* offset nav */
+  overflow-y: scroll;
 }
 
 #screen-overlay {

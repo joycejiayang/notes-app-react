@@ -16,7 +16,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     line-clamp: 1;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .note-entry .note-preview {
@@ -30,7 +30,7 @@
     font-size: 14px;
     line-height: 22px;
     max-height: 70px;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .note-preview ol, ul {

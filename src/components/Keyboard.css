@@ -3,7 +3,7 @@
     bottom: var(--phone-black-vertical-padding);
     width: var(--phone-width);
     height: fit-content;
-    overflow: hidden;
+    overflow: clip;
     z-index: 9999;
 }
 
