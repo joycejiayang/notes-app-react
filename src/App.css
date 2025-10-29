@@ -3,7 +3,7 @@
   width: var(--phone-width);
   height: var(--phone-height);
   display: block;
-  position: absolute;
+  position: fixed;
   overflow-y: auto;
   scrollbar-width: none; /* hides scrollbar */
   -ms-overflow-style: none; /* hides scrollbar in IE 10+ */
@@ -24,6 +24,7 @@
   position: fixed;
   top: var(--phone-black-vertical-padding);
   left: var(--phone-black-horizontal-padding);
+  overflow-y: auto;
 }
 
 .header {
@@ -62,13 +63,12 @@
   flex-direction: column;
   gap: 10px;
   padding: 8px 18px 18px;
-  margin-top: 51px; /* offset header */
-  margin-bottom: 78px; /* offset nav */
+  padding-top: calc(51px + 8px); /* offset header */
+  padding-bottom: calc(78px + 18px); /* offset nav */
   min-height: var(--phone-height);
   height: fit-content;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: red;
 }
 
 #screen-overlay {
