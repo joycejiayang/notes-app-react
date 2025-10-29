@@ -57,14 +57,14 @@
   height: auto;
 }
 
-main.notes-list {
+.notes-list {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 8px 18px 18px;
   margin-top: 51px; /* offset header */
   margin-bottom: 78px; /* offset nav */
-  overflow-y: scroll;
 }
 
 #screen-overlay {
