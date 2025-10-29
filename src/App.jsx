@@ -46,7 +46,7 @@ function App() {
       keyboard.style.transform = "translateY(-100%)";
     } else {
       screenOverlay.style.display = "none";
-      keyboard.style.transform = "translateY(0%)";
+      keyboard.style.transform = "translateY(-50%)";
     }
   }
 
