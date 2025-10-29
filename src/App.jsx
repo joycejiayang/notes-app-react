@@ -43,12 +43,10 @@ function App() {
 
     if (e.target === searchbar) {
       screenOverlay.style.display = "block";
-      keyboard.style.transform = "translateY(-100%)";
-      keyboard.style.webkitTransform = "translateY(-100%)";
+      keyboard.style.transform = "translateY(0)";
     } else {
       screenOverlay.style.display = "none";
-      keyboard.style.transform = "translateY(0)";
-      keyboard.style.webkitTransform = "translateY(0)";
+      keyboard.style.transform = "translateY(100%)";
     }
   }
 

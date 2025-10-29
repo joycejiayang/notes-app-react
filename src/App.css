@@ -15,6 +15,17 @@
   background: transparent; /* optional, just makes it invisible */
 }
 
+/* Purple background for the entire phone screen */
+#root::before {
+  content: '';
+  width: var(--phone-width);
+  height: var(--phone-height);
+  background-color: var(--pale-purple);
+  position: fixed;
+  top: var(--phone-black-vertical-padding);
+  left: var(--phone-black-horizontal-padding);
+}
+
 .header {
   position: fixed;
   top: var(--phone-black-vertical-padding);
