@@ -65,7 +65,7 @@ function App() {
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-      {/* <header className="header" onClick={(e) => handleKeyboard(e)}>
+      <header className="header" onClick={(e) => handleKeyboard(e)}>
         <h1 className="page-title">Notes</h1>
         <SearchBar onSearch={(query) => searchNotes(query)} />
         <div className="corner-coverings" aria-hidden="true">
@@ -73,7 +73,7 @@ function App() {
           <img src={rightCorner} className="corner"/>
         </div>
         <div id="screen-overlay"></div>
-      </header> */}
+      </header>
 
       <main className="notes-list" onClick={(e) => handleKeyboard(e)}>
           {allNotes.map(noteData => (
@@ -85,7 +85,7 @@ function App() {
           ))}
       </main>
       
-      {/* <Nav onClick={(e) => handleKeyboard(e)}/> */}
+      <Nav onClick={(e) => handleKeyboard(e)}/>
 
       <Keyboard />
     </>
