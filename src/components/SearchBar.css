@@ -1,8 +1,9 @@
 .search-bar {
     width: 100%;
+    z-index: 1000;
 }
 
-.search-bar .search-icon {
+.search-icon {
     width: auto;
     height: 17px;
     position: absolute;
@@ -11,7 +12,8 @@
     margin-left: 8px;
 }
 
-.search-bar .search-input-area {
+#search-input-area {
+    color: var(--dark-gray);
     padding: 6px 12px;
     font-size: 13px;
     line-height: 13px;
@@ -23,13 +25,14 @@
     text-indent: 20px;
 }
 
-.search-bar .search-input-area::placeholder {
+#search-input-area::placeholder {
     color: var(--black-65-hex);
     font-weight: 600;
 }
 
-.search-bar .search-input-area:focus {
+#search-input-area:focus {
     background-color: white;
     outline: solid 1.5px var(--vibrant-pink);
-    outline-offset: 0.5px;
+    outline-offset: 0.25px;
+    caret-color: var(--vibrant-pink);
 }

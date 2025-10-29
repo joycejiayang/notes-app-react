@@ -12,6 +12,7 @@
   --bright-blue: #0857FD;
   --vibrant-pink: #DE217D;
   --dark-gray: #2E2E32;
+  --gray: #C6C6D0;
   --light-gray: #D6D6E0;
   --white-25: rgba(255, 255, 255, 0.25);
   --white-90: rgba(255, 255, 255, 0.9);
@@ -24,8 +25,8 @@
   /* Dimensions */
   --phone-width: clamp(320px, 100vw, 440px);
   --phone-height: clamp(568px, 100vh, 956px);
-  --phone-black-horizontal-padding: calc((100% - var(--phone-width)) / 2);
-  --phone-black-vertical-padding: calc((100% - var(--phone-height)) / 2);
+  --phone-black-horizontal-padding: -webkit-calc((100% - var(--phone-width)) / 2);
+  --phone-black-vertical-padding: -webkit-calc((100% - var(--phone-height)) / 2);
 }
 
 * {

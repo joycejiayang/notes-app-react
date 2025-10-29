@@ -35,20 +35,36 @@ function App() {
     setAllNotes(filteredNotes);
   }
 
+  /* Pull up keyboard if input area tapped */
+  function handleKeyboard(e) {
+    const searchbar = document.getElementById("search-input-area");
+    const keyboard = document.getElementById("keyboard");
+    const screenOverlay = document.getElementById("screen-overlay");
+
+    if (e.target === searchbar) {
+      screenOverlay.style.display = "block";
+      keyboard.style.transform = "translateY(-100%)";
+    } else {
+      screenOverlay.style.display = "none";
+      keyboard.style.transform = "translateY(0%)";
+    }
+  }
+
   return (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-      <header class="header">
+      <header className="header" onClick={(e) => handleKeyboard(e)}>
         <h1 className="page-title">Notes</h1>
         <SearchBar onSearch={(query) => searchNotes(query)} />
         <div className="corner-coverings" aria-hidden="true">
           <img src={leftCorner} className="corner"/>
           <img src={rightCorner} className="corner"/>
         </div>
+        <div id="screen-overlay"></div>
       </header>
 
-      <main class="notes-list">
+      <main className="notes-list" onClick={(e) => handleKeyboard(e)}>
           {allNotes.map(noteData => (
             <NoteCard 
               key={ noteData.id } 
@@ -58,7 +74,7 @@ function App() {
           ))}
       </main>
       
-      <Nav />
+      <Nav onClick={(e) => handleKeyboard(e)}/>
 
       <Keyboard />
     </>

@@ -1,15 +1,25 @@
-.keyboard {
-    background-color: var(--light-gray);
-    width: var(--phone-width);
+.keyboard-container {
     position: fixed;
     bottom: var(--phone-black-vertical-padding);
+    width: var(--phone-width);
+    height: fit-content;
+    overflow: hidden;
     z-index: 9999;
-    display: flex;
+}
+
+#keyboard {
+    background: var(--gray);
+    width: var(--phone-width);
+    position: relative;
+    top: 100%;
+    /* transform: translateY(-100%); */
+    transition: ease-in-out 300ms;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding-top: 16px;
     padding-bottom: 28px;
+    display: flex;
 }
 
 .keyboard-row {
@@ -25,7 +35,7 @@ kbd {
     align-items: center;
     justify-content: center;
     color: var(--dark-gray);
-    background-color: var(--white-90);
+    background-color: white;
     width: 32px;
     border-radius: 5px;
     font-size: 20px;
@@ -60,4 +70,12 @@ kbd img {
     height: calc(100% - 6px);
     max-height: 20px;
     max-width: calc(100% - 6px);
+}
+
+.black-keyboard-cover {
+    width: var(--phone-width);
+    height: var(--phone-black-vertical-padding);
+    position: fixed;
+    bottom: 0;
+    background-color: black;
 }

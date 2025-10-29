@@ -16,12 +16,12 @@ function SearchBar({ onSearch }) {
     return (
         <>
         <div className="search-bar">
-            <img className="search-icon" alt="Search Bar" src={searchIcon} />
+            <img className="search-icon" alt="Search Bar" src={ searchIcon } />
             <input 
-                className="search-input-area"
+                id="search-input-area"
                 placeholder="Search"
                 onInput={(e) => handleInput(e)}
-                inputmode="none"
+                inputMode="none"
             ></input>
         </div>
         </>
