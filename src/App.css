@@ -4,7 +4,7 @@
   height: var(--phone-height);
   display: block;
   position: absolute;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-width: none; /* hides scrollbar */
   -ms-overflow-style: none; /* hides scrollbar in IE 10+ */
 }
@@ -66,9 +66,9 @@
   margin-bottom: 78px; /* offset nav */
   min-height: var(--phone-height);
   height: fit-content;
-  position: relative;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  background-color: red;
 }
 
 #screen-overlay {
