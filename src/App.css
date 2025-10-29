@@ -68,6 +68,7 @@
   height: fit-content;
   position: relative;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 #screen-overlay {
