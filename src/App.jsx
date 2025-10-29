@@ -50,6 +50,12 @@ function App() {
     }
   }
 
+  /* Setting up the phone width/height dimensions for iPhone Safari browser */
+  const vw100 = window.innerWidth;
+  document.documentElement.style.setProperty('--vw100', `${vw100}px`);
+  const vh100 = window.innerHeight;
+  document.documentElement.style.setProperty('--vh100', `${vh100}px`);
+
   return (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />

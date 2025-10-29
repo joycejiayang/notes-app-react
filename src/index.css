@@ -23,10 +23,10 @@
   --black-65-hex: #515157;
   
   /* Dimensions */
-  --phone-width: clamp(320px, 100vw, 440px);
-  --phone-height: clamp(568px, 100vh, 956px);
-  --phone-black-horizontal-padding: -webkit-calc((100% - var(--phone-width)) / 2);
-  --phone-black-vertical-padding: -webkit-calc((100% - var(--phone-height)) / 2);
+  --phone-width: clamp(320px, var(--vw100, 100vw), 440px);
+  --phone-height: clamp(568px, var(--vh100, 100vh), 956px);
+  --phone-black-horizontal-padding: calc((100% - var(--phone-width)) / 2);
+  --phone-black-vertical-padding: calc((100% - var(--phone-height)) / 2);
 }
 
 * {
