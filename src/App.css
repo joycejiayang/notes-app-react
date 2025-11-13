@@ -1,10 +1,6 @@
 #root {
   background-color: var(--pale-purple);
-  width: var(--phone-width);
-  height: var(--phone-height);
-  display: block;
-  position: fixed;
-  overflow-y: auto;
+  overflow-y: scroll;
   scrollbar-width: none; /* hides scrollbar */
   -ms-overflow-style: none; /* hides scrollbar in IE 10+ */
 }
@@ -16,21 +12,20 @@
 }
 
 /* Purple background for the entire phone screen */
-#root::before {
+/* #root::before {
   content: '';
-  width: var(--phone-width);
-  height: var(--phone-height);
+  width: 100%;
+  height: 100%;
   background-color: var(--pale-purple);
   position: fixed;
-  top: var(--phone-black-vertical-padding);
-  left: var(--phone-black-horizontal-padding);
-  overflow-y: auto;
-}
+  top: 0;
+  left: 0;
+} */
 
 .header {
   position: fixed;
-  top: var(--phone-black-vertical-padding);
-  width: var(--phone-width);
+  top: 0;
+  width: 100%;
   z-index: 99;
 }
 
@@ -68,18 +63,28 @@
   padding: 8px 18px 18px;
   padding-top: calc(51px + 8px); /* offset header */
   padding-bottom: calc(78px + 18px); /* offset nav */
-  min-height: var(--phone-height);
-  height: fit-content;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  /* -webkit-overflow-scrolling: touch; */
+  background-color: var(--pale-purple);
+  scrollbar-width: none; /* hides scrollbar */
+  -ms-overflow-style: none; /* hides scrollbar in IE 10+ */
 }
+
+/* For Webkit browsers (Chrome, Safari) */
+.notes-list::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* optional, just makes it invisible */
+}
+
 
 #screen-overlay {
   position: fixed;
-  top: var(--phone-black-vertical-padding);
-  right: var(--phone-black-horizontal-padding);
-  width: var(--phone-width);
-  height: var(--phone-height);
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   background: white;
   opacity: 30%;
   display: none;

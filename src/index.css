@@ -20,28 +20,11 @@
   --black-40-hex: #8A8A95;
   --black-65: rgba(0, 0, 0, 0.65);
   --black-65-hex: #515157;
-  
-  /* Dimensions */
-  --phone-width: clamp(320px, 100vw, 440px);
-  --phone-height: clamp(568px, 100vh, 956px);
-  --phone-black-horizontal-padding: calc((100% - clamp(320px, var(--vw100, 100vw), 440px)) / 2);
-  --phone-black-vertical-padding: calc((100% - clamp(568px, var(--vh100, 100vh), 956px)) / 2);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   font-family: "Be Vietnam Pro", sans-serif;
-  background-color: black;
-  color: var(--dark-gray);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
 }
