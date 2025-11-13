@@ -54,7 +54,6 @@ function Keyboard() {
                     <kbd className="kbd-wider kbd-vibrant-pink"><img src={returnKey} alt="return" /></kbd>
                 </div>
             </div>
-            <div className="black-keyboard-cover" aria-hidden="true"></div>
         </aside>
     )
 }

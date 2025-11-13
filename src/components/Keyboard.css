@@ -1,15 +1,19 @@
 .keyboard-container {
     position: fixed;
-    bottom: var(--phone-black-vertical-padding);
-    width: var(--phone-width);
+    bottom: 0;
+    width: 100%;
     height: fit-content;
     overflow: clip;
     z-index: 9999;
+
+    /* Base key width */
+    --base-key-width: calc(100vw / 12);
+    --base-key-gap: calc(100vw / 12 / 8);
 }
 
 #keyboard {
     background: var(--gray);
-    width: var(--phone-width);
+    width: 100%;
     transform: translateY(100%);
     transition: ease-in-out 300ms;
     flex-direction: column;
@@ -23,8 +27,9 @@
 .keyboard-row {
     display: flex;
     justify-content: center;
-    gap: 5px;
-    max-width: calc(var(--phone-width) - 8px);
+    /* gap: 5px; */
+    gap: var(--base-key-gap);
+    max-width: calc(100% - 8px);
 }
 
 kbd {
@@ -34,7 +39,8 @@ kbd {
     justify-content: center;
     color: var(--dark-gray);
     background-color: white;
-    width: 32px;
+    /* width: 32px; */
+    width: var(--base-key-width);
     border-radius: 5px;
     font-size: 20px;
     padding: 8px 0;
@@ -42,11 +48,13 @@ kbd {
 }
 
 .kbd-wider {
-    width: 52px;
+    /* width: 52px; */
+    width: calc(var(--base-key-width) * 1.5 + var(--base-key-gap) * 0.5);
 }
 
 .kbd-space {
-    width: 108px;
+    /* width: 108px; */
+    width: calc(var(--base-key-width) * 3 + var(--base-key-gap) * 2);
     font-size: 17px;
 }
 
@@ -68,12 +76,4 @@ kbd img {
     height: calc(100% - 6px);
     max-height: 20px;
     max-width: calc(100% - 6px);
-}
-
-.black-keyboard-cover {
-    width: var(--phone-width);
-    height: var(--phone-black-vertical-padding);
-    position: fixed;
-    bottom: 0;
-    background-color: black;
 }
