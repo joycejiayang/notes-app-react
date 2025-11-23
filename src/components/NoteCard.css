@@ -16,7 +16,7 @@
     font-size: 16px;
     line-height: 20px;
     position: relative;
-    top: -6px; /* makes the actual text align to the corner accounting for line height */
+    top: -4px; /* makes the actual text align to the corner accounting for line height */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
@@ -26,7 +26,7 @@
 
 .note-entry .note-preview {
     position: relative;
-    margin-top: -8px;
+    margin-top: 4px;
     padding: 0 16px; 
     font-size: 14px;
     line-height: 22px;
@@ -83,7 +83,7 @@
 .note-entry .time {
     font-size: 11px;
     line-height: 11px;
-    margin-top: 15px;
+    margin-top: 14px;
     margin-left: 16px;
     color: var(--black-65-hex);
 }

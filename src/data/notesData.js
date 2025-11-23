@@ -7,6 +7,12 @@ const notesData = [
         content: `<ul>
                     <li>Why does "phonetically" not sound how it's spelled?</li>
                     <li>What if socks with sandals are just ahead of their time?</li>
+                    <li>This quote: "You can't pour from an empty cup."</li>
+                    <li>How do I know if I’m actually awake right now, or if this is just a really detailed dream?</li>
+                    <li>If two mind readers are reading each other’s minds, whose thoughts are they actually thinking?</li>
+                    <li>If you buy a bigger bed, you technically have more bed room but less bedroom.</li>
+                    <li>Sometimes, the smell of rain feels like the earth is hitting the refresh button.</li>
+                    <li>The moon’s just out here borrowing sunlight and still managing to look cool.</li>
                 </ul>`,
         date: "Oct 10, 2024",
         numStars: 0,

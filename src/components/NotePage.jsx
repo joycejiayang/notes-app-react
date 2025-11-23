@@ -9,7 +9,8 @@ function NotePage({noteData, onBackClick}) {
                 <button className="back-btn" onClick={onBackClick}>&#8592; Back</button>
                 {/* <StarRating numStars={noteData.numStars} onNumStarChange={onNumStarChange} parentContainer={"note-editor"}/> */}
             </div>
-            <h2 className="note-title">{noteData.title}</h2>
+            <h2>{noteData.title}</h2>
+            <time>{noteData.date}</time>
             <div className="note-content" dangerouslySetInnerHTML={{__html: noteData.content}}></div>
         </section>
     )
