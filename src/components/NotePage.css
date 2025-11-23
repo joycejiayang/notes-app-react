@@ -46,3 +46,7 @@
     flex-direction: column;
     gap: 12px;
 }
+
+#note-content img {
+    width: 100%;
+}
