@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import './App.css'
 import NoteCard from './components/NoteCard'
 import Nav from './components/Nav'
@@ -70,7 +70,7 @@ function App() {
       <header className="header">
         <div className="header-content">
           <h1 className="page-title">Notes</h1>
-          <SearchBar onSearch={(query) => searchNotes(query)} onSearchBarClick={ showKeyboard }/>
+          <SearchBar onSearch={(query) => searchNotes(query)} onSearchBarClick={showKeyboard}/>
         </div>
         <div className="corner-coverings" aria-hidden="true">
           <img src={leftCorner} className="corner"/>
@@ -82,9 +82,9 @@ function App() {
       <main className="notes-list">
           {allNotes.map(noteData => (
             <NoteCard 
-              key={ noteData.id } 
-              noteData={ noteData }
-              onStarRatingChange={ (newStarCount) => updateNumStars( noteData.id, newStarCount ) }
+              key={noteData.id} 
+              noteData={noteData}
+              onStarRatingChange={(newStarCount) => updateNumStars(noteData.id, newStarCount)}
             />
           ))}
       </main>

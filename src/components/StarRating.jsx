@@ -35,7 +35,9 @@ function StarRating({numStars, onNumStarChange, parentContainer}) {
 
         console.log('newStarCount:', newStarCount);
         setStarCount(newStarCount);
-        onNumStarChange?.(newStarCount);
+        if (parentContainer === "noteEditor") {
+            onNumStarChange(newStarCount);
+        }
     }
 
     /* Render the stars based on the star toggling/switching logic */
