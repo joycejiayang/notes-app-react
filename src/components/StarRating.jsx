@@ -55,7 +55,7 @@ function StarRating({numStars, onNumStarChange, parentContainer}) {
             );
         }
 
-        starsClasses += " noteEditor";
+        starsClasses += " note-editor";
     }
 
     for (let i = 0; i < currStarCount; i++) {

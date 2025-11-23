@@ -16,15 +16,16 @@ function App() {
   const [allNotes, setAllNotes] = useState(sortedNotes || []);
   const [noteToOpen, setNoteToOpen] = useState([]);
 
-  /* Updates numStar for a note when the note's star rating changes in StarRating
-   * Do not re-render the notes or else it will cause flickering */
-  const updateNumStars = (noteDataId, newStarCount) => {
-    allNotes.forEach(noteData => {
-      if (noteData.id === noteDataId) {
-        noteData.numStars = newStarCount;
-        return;
+  /* Updates numStar for a note when the note's star rating changes in StarRating */
+  const updateNumStars = (noteDataID, newStarCount) => {
+    const updatedNotes = allNotes.map(noteData => {
+      if (noteData.id === noteDataID) {
+        return {...noteData, numStars: newStarCount}
+      } else {
+        return noteData;
       }
     });
+    setAllNotes(updatedNotes);
   }
 
   /* Filter notes by search query */
@@ -98,7 +99,6 @@ function App() {
             <NoteCard 
               key={noteData.id} 
               noteData={noteData}
-              onStarRatingChange={(newStarCount) => updateNumStars(noteData.id, newStarCount)}
               onCardClick={openNote}
             />
           ))}
@@ -106,7 +106,7 @@ function App() {
       
       <Nav />
 
-      <NotePage noteData={noteToOpen} onBackClick={closeNote}/>
+      <NotePage noteData={noteToOpen} onBackClick={closeNote} onStarRatingChange={(newStarCount) => updateNumStars(noteData.id, newStarCount)}/>
 
       <Keyboard />
     </>
