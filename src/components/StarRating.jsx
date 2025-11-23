@@ -3,7 +3,7 @@ import './StarRating.css'
 import hollowStar from '../assets/hollow-star.svg'
 import filledStar from '../assets/filled-star.svg'
 
-function StarRating({ numStars, onNumStarChange }) {
+function StarRating({numStars, onNumStarChange, parentContainer}) {
     const [currStarCount, setStarCount] = useState(numStars || 0);
 
     /* Implements star toggling/switching logic */
@@ -40,30 +40,35 @@ function StarRating({ numStars, onNumStarChange }) {
 
     /* Render the stars based on the star toggling/switching logic */
     const starsArray = [];
-    // if (currStarCount < 3) {
-    //     starsArray.push(
-    //     <img
-    //         key="empty"
-    //         src={hollowStar}
-    //         onClick={() => handleStarClick(currStarCount)}
-    //         alt="empty star"
-    //     />
-    //     );
-    // }
+    let starsClasses = "stars"
+    if (parentContainer === "noteEditor") {
+        if (currStarCount < 3) {
+            starsArray.push(
+            <img
+                key="empty"
+                src={hollowStar}
+                onClick={() => handleStarClick(currStarCount)}
+                alt="empty star"
+            />
+            );
+        }
+
+        starsClasses += " noteEditor";
+    }
 
     for (let i = 0; i < currStarCount; i++) {
         starsArray.push(
         <img
             key={i}
             src={filledStar}
-            // onClick={() => handleStarClick(currStarCount - 1 - i)}
+            onClick={parentContainer === "noteEditor" ? () => handleStarClick(currStarCount - 1 - i) : undefined}
             alt="filled star"
         />
         );
     }
 
     return (
-        <div className="stars">
+        <div className={starsClasses}>
             { starsArray }
         </div>
     )
