@@ -40,7 +40,7 @@
     color: var(--black-40-hex);
 }
 
-.clear-search-btn {
+#clear-search-btn {
     display: none; /* initially hidden */
     position: absolute;
     top: 26px;
@@ -52,7 +52,7 @@
     cursor: pointer;
 }
 
-.clear-search-btn img {
+#clear-search-btn img {
     width: 13px;
     height: 13px;
 }

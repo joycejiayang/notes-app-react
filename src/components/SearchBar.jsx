@@ -15,14 +15,20 @@ function SearchBar({onSearch, onSearchBarClick}) {
     function handleInput(e) {
         setSearchQuery(e.target.value);
         setSearchInput(e.target.value);
-        setClearBtnDisplay({display: "block"});
+
+        const clearButton = document.getElementById("clear-search-btn");
+        clearButton.style.display = "block";
     }
 
     function clearInput() {
         setSearchQuery("");
         setSearchInput("");
-        document.getElementById("search-input-area").focus();
-        setClearBtnDisplay({display: "none"});
+        
+        const searchInputArea = document.getElementById("search-input-area")
+        searchInputArea.focus();
+        
+        const clearButton = document.getElementById("clear-search-btn");
+        clearButton.style.display = "none";
     }
 
     function handleEnter(e) {
@@ -44,7 +50,7 @@ function SearchBar({onSearch, onSearchBarClick}) {
                     onClick={onSearchBarClick}
                     inputMode="none">
                 </input>
-                <button className="clear-search-btn" onClick={clearInput} style={clearBtnDisplay}>
+                <button id="clear-search-btn" onClick={clearInput}>
                     <img alt="Clear Input" src={clearButton}/>
                 </button>
             </div>

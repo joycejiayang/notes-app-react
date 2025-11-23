@@ -1,29 +1,25 @@
-.keyboard-container {
+#keyboard {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: fit-content;
-    overflow: clip;
     z-index: 9999;
-    box-shadow: 0 0 60px white;
-
-    /* Base key width */
-    --base-key-width: calc(100vw / 12);
-    --base-key-gap: calc(100vw / 12 / 8);
-}
-
-#keyboard {
+    /* box-shadow: 0 0 60px white; */
     background: var(--gray);
-    width: 100%;
-    transform: translateY(100%);
-    transition: ease-in-out 300ms;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding-top: 16px;
     padding-bottom: 28px;
-    display: flex;
-}
+
+    /* Translate */
+    transform: translateY(100%);
+    transition: ease-in-out 300ms;
+
+    /* Base key width */
+    --base-key-width: calc(100vw / 12);
+    --base-key-gap: calc(100vw / 12 / 8);
+} 
 
 .keyboard-row {
     display: flex;

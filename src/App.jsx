@@ -4,6 +4,7 @@ import NoteCard from './components/NoteCard'
 import Nav from './components/Nav'
 import SearchBar from './components/SearchBar'
 import Keyboard from './components/Keyboard'
+import NotePage from './components/NotePage'
 import notesData from './data/notesData'
 import leftCorner from './assets/left-corner.png'
 import rightCorner from './assets/right-corner.png'
@@ -12,7 +13,6 @@ function App() {
   const sortedNotes = [...notesData].sort((a, b) => {
     return a.order - b.order;
   })
-
   const [allNotes, setAllNotes] = useState(sortedNotes || []);
 
   /* Updates numStar for a note when the note's star rating changes in StarRating
@@ -40,8 +40,9 @@ function App() {
     const keyboard = document.getElementById("keyboard");
     const screenOverlay = document.getElementById("screen-overlay");
 
-    screenOverlay.style.display = "block";
+    screenOverlay.style.display = "flex";
     keyboard.style.transform = "translateY(0)";
+    keyboard.style.boxShadow = "0 0 60px white";
   }
 
   function hideKeyboard() {
@@ -50,6 +51,7 @@ function App() {
 
     screenOverlay.style.display = "none";
     keyboard.style.transform = "translateY(100%)";
+    keyboard.style.boxShadow = "none";
   }
 
   /* Setting up the phone width/height dimensions for iPhone Safari browser */
@@ -58,6 +60,16 @@ function App() {
     document.documentElement.style.setProperty('--vw100', `${vw100}px`);
     const vh100 = window.innerHeight;
     document.documentElement.style.setProperty('--vh100', `${vh100}px`);
+  }
+
+  function openNote() {
+    const notePage = document.getElementById("note-page");
+    notePage.classList.add("active");
+  }
+
+  function closeNote() {
+    const notePage = document.getElementById("note-page");
+    notePage.classList.remove("active");
   }
 
   setWidthHeight();
@@ -85,11 +97,14 @@ function App() {
               key={noteData.id} 
               noteData={noteData}
               onStarRatingChange={(newStarCount) => updateNumStars(noteData.id, newStarCount)}
+              onCardClick={openNote}
             />
           ))}
       </main>
       
       <Nav />
+
+      <NotePage onBackClick={closeNote}/>
 
       <Keyboard />
     </>

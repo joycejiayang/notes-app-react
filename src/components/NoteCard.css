@@ -6,6 +6,10 @@
     height: fit-content;
 }
 
+.note-entry:hover {
+    cursor: pointer;
+}
+
 .note-entry .note-title {
     padding: 0 16px;
     width: 100%;
