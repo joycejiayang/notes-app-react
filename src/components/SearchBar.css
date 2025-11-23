@@ -40,3 +40,17 @@
 #search-input-area:focus::placeholder {
     color: var(--black-40-hex);
 }
+
+.clear-search-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 24px;
+    height: 17px;
+    width: 17px;
+    border: none;
+    background-color: var(--dark-gray);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}

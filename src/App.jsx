@@ -76,7 +76,7 @@ function App() {
           <img src={leftCorner} className="corner"/>
           <img src={rightCorner} className="corner"/>
         </div>
-        <div id="screen-overlay" onClick={ hideKeyboard }></div>
+        <div id="screen-overlay" onClick={hideKeyboard}></div>
       </header>
 
       <main className="notes-list">
