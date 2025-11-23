@@ -85,7 +85,7 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background: white;
-  opacity: 30%;
+  background: var(--dark-blue);
+  opacity: 10%;
   display: none;
 }

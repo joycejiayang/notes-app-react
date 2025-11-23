@@ -5,6 +5,7 @@
     height: fit-content;
     overflow: clip;
     z-index: 9999;
+    box-shadow: 0 0 60px white;
 
     /* Base key width */
     --base-key-width: calc(100vw / 12);
