@@ -71,7 +71,7 @@ function StarRating({numStars, onNumStarChange, parentContainer}) {
 
     return (
         <div className={starsClasses}>
-            { starsArray }
+            {starsArray}
         </div>
     )
 }

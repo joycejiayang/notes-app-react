@@ -14,6 +14,7 @@ function App() {
     return a.order - b.order;
   })
   const [allNotes, setAllNotes] = useState(sortedNotes || []);
+  const [noteToOpen, setNoteToOpen] = useState([]);
 
   /* Updates numStar for a note when the note's star rating changes in StarRating
    * Do not re-render the notes or else it will cause flickering */
@@ -62,9 +63,10 @@ function App() {
     document.documentElement.style.setProperty('--vh100', `${vh100}px`);
   }
 
-  function openNote() {
+  function openNote(note) {
     const notePage = document.getElementById("note-page");
     notePage.classList.add("active");
+    setNoteToOpen(note);
   }
 
   function closeNote() {
@@ -104,7 +106,7 @@ function App() {
       
       <Nav />
 
-      <NotePage onBackClick={closeNote}/>
+      <NotePage noteData={noteToOpen} onBackClick={closeNote}/>
 
       <Keyboard />
     </>
