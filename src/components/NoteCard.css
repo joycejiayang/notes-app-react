@@ -14,9 +14,9 @@
     padding: 0 16px;
     width: 100%;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 20px;
     position: relative;
-    top: -4px; /* makes the actual text align to the corner accounting for line height */
+    top: -6px; /* makes the actual text align to the corner accounting for line height */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
@@ -26,11 +26,7 @@
 
 .note-entry .note-preview {
     position: relative;
-    margin-top: 2px;
-    /* 2px margin-top of .note-preview
-     * + the -4px top of .note-title 
-     * + 26px line height of .note-title 
-     * = 8px gap between .note-title and .note-preview */
+    margin-top: -8px;
     padding: 0 16px; 
     font-size: 14px;
     line-height: 22px;
@@ -87,7 +83,7 @@
 .note-entry .time {
     font-size: 11px;
     line-height: 11px;
-    margin-top: 14px;
+    margin-top: 15px;
     margin-left: 16px;
     color: var(--black-65-hex);
 }
