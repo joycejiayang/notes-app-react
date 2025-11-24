@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import './NoteCard.css'
+import './styles/NoteCard.css'
 import StarRating from "./StarRating"
 
 function NoteCard({noteData, onCardClick}) {

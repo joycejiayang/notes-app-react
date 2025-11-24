@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Keyboard.css'
+import './styles/Keyboard.css'
 import uppercaseKey from '../assets/keyboard-assets/uppercase.png'
 import backspaceKey from '../assets/keyboard-assets/backspace.png'
 import globeKey from '../assets/keyboard-assets/globe.png'

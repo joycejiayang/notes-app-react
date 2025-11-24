@@ -1,0 +1,106 @@
+#note-page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 100%;
+    z-index: 10000;
+    overflow-y: scroll;
+    transition: transform 750ms ease;
+}
+
+.note-page-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 24px 24px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+}
+
+.back-btn {
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#note-page h2 {
+    padding: 0 24px;
+    margin: 4px 0;
+}
+
+#note-page time {
+    padding: 0 24px;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+#note-content {
+    padding: 0 24px 24px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 24px;
+}
+
+/* Note Content */
+#note-content ol, #note-content ul {
+    padding-inline-start: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#note-content ul:has(input[type="checkbox"]) {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+#note-content input[type="checkbox"] {
+    display: none;
+}
+
+#note-content label:has(input[type="checkbox"]) {
+    position: relative;
+    padding-left: 25px;
+    pointer-events: none; /* TODO */
+}
+
+#note-content label:has(input[type="checkbox"])::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    outline: solid 1px var(--dark-gray);
+    outline-offset: -1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.5px 0;
+}
+
+#note-content label:has(input[type="checkbox"]:checked) {
+    color: var(--black-40-hex);
+    text-decoration: line-through;
+}
+
+#note-content label:has(input[type="checkbox"]:checked)::before {
+    content: url("../../assets/checkmark-small.svg");
+    color: white;
+    line-height: 17px;
+    text-align: center;
+    outline: none;
+    outline-offset: 0;
+    background-color: var(--vibrant-pink);
+}
+
+#note-content img {
+    width: 100%;
+}

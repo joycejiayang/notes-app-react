@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import StarRating from './StarRating.jsx';
-import './NotePage.css';
+import './styles/NotePage.css';
 
 function NotePage({noteData, onBackClick, onStarRatingChange}) {
     function handleStarRatingChange(newStarCount) {

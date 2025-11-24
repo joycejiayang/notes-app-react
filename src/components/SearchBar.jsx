@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import './SearchBar.css'
+import './styles/SearchBar.css'
 import searchIcon from '../assets/search.svg'
 import clearButton from '../assets/clear-button.svg'
 

@@ -27,6 +27,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Be Vietnam Pro", sans-serif;
+  scrollbar-width: none; /* hides scrollbar */
+  -ms-overflow-style: none; /* hides scrollbar in IE 10+ */
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+*::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* optional, just makes it invisible */
 }
 
 body {

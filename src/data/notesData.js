@@ -44,17 +44,23 @@ const notesData = [
     {
         id: 4,
         title: "Grocery List",
-        content: `<label for="checkboxItem1">
-                    <input type="checkbox" id="checkboxItem1" name="checkbox1" value="checkboxItem1" />Bread
-                </label><br>
-                
-                <label for="checkboxItem2">
-                    <input type="checkbox" id="checkboxItem2" name="checkbox1" value="checkboxItem2" checked />Peanut butter
-                </label><br>
-                
-                <label for="checkboxItem3">
-                    <input type="checkbox" id="checkboxItem3" name="checkbox1" value="checkboxItem3" />Yogurt cups
-                </label><br>`,
+        content: `<ul>
+                    <li>
+                        <label for="checkboxItem1">
+                            <input type="checkbox" id="checkboxItem1" name="checkbox1" value="checkboxItem1" />Bread
+                        </label>
+                    </li>
+                    <li>
+                        <label for="checkboxItem2">
+                            <input type="checkbox" id="checkboxItem2" name="checkbox1" value="checkboxItem2" checked />Peanut butter
+                        </label>
+                    </li>
+                    <li>
+                        <label for="checkboxItem3">
+                            <input type="checkbox" id="checkboxItem3" name="checkbox1" value="checkboxItem3" />Yogurt cups
+                        </label>
+                    </li>
+                </ul>`,
         date: "2:34 PM",
         numStars: 3,
         order: 1

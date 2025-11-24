@@ -34,21 +34,46 @@
     overflow: clip;
 }
 
-.note-preview ol, ul {
+.note-entry .time {
+    font-size: 11px;
+    line-height: 11px;
+    margin-top: 14px;
+    margin-left: 16px;
+    color: var(--black-65-hex);
+}
+
+.note-entry .stars {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Note Content */
+.note-preview {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-preview ol, .note-preview ul {
     padding-inline-start: 18px;
+}
+
+.note-preview ul:has(input[type="checkbox"]) {
+    list-style-type: none;
+    padding-inline-start: 0;
 }
 
 .note-preview input[type="checkbox"] {
     display: none;
 }
 
-.note-preview label {
+.note-preview label:has(input[type="checkbox"]) {
     position: relative;
     padding-left: 25px;
     pointer-events: none;
 }
 
-.note-preview label::before {
+.note-preview label:has(input[type="checkbox"])::before {
     content: "";
     width: 17px;
     height: 17px;
@@ -67,7 +92,7 @@
 }
 
 .note-preview label:has(input[type="checkbox"]:checked)::before {
-    content: url("../assets/checkmark-small.svg");
+    content: url("../../assets/checkmark-small.svg");
     color: white;
     line-height: 17px;
     text-align: center;
@@ -78,18 +103,4 @@
 
 .note-preview img {
     width: 100%;
-}
-
-.note-entry .time {
-    font-size: 11px;
-    line-height: 11px;
-    margin-top: 14px;
-    margin-left: 16px;
-    color: var(--black-65-hex);
-}
-
-.note-entry .stars {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
 }

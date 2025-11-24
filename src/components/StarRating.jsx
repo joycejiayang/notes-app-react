@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './StarRating.css'
+import {useState, useEffect} from 'react'
+import './styles/StarRating.css'
 import hollowStar from '../assets/hollow-star.svg'
 import filledStar from '../assets/filled-star.svg'
 
@@ -43,31 +43,36 @@ function StarRating({numStars, onNumStarChange, parentContainer}) {
     /* Render the stars based on the star toggling/switching logic */
     const starsArray = [];
     let starsClasses = "stars"
-    if (parentContainer === "noteEditor") {
-        if (currStarCount < 3) {
+
+    function renderStars() {
+        if (parentContainer === "noteEditor") {
+            if (currStarCount < 3) {
+                starsArray.push(
+                <img
+                    key="empty"
+                    src={hollowStar}
+                    onClick={() => handleStarClick(currStarCount)}
+                    alt="empty star"
+                />
+                );
+            }
+
+            starsClasses = "stars note-editor";
+        }
+
+        for (let i = 0; i < currStarCount; i++) {
             starsArray.push(
             <img
-                key="empty"
-                src={hollowStar}
-                onClick={() => handleStarClick(currStarCount)}
-                alt="empty star"
+                key={i}
+                src={filledStar}
+                onClick={parentContainer === "noteEditor" ? () => handleStarClick(currStarCount - 1 - i) : undefined}
+                alt="filled star"
             />
             );
         }
-
-        starsClasses += " note-editor";
     }
 
-    for (let i = 0; i < currStarCount; i++) {
-        starsArray.push(
-        <img
-            key={i}
-            src={filledStar}
-            onClick={parentContainer === "noteEditor" ? () => handleStarClick(currStarCount - 1 - i) : undefined}
-            alt="filled star"
-        />
-        );
-    }
+    renderStars();
 
     return (
         <div className={starsClasses}>

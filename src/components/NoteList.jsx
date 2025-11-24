@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import NoteCard from './NoteCard.jsx'
-import './NoteList.css'
+import './styles/NoteList.css'
 
 function NoteList({allNotes, onNoteOpen}) {
     return (

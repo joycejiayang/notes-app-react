@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Nav.css'
+import './styles/Nav.css'
 import homeIconActive from '../assets/home-active.svg'
 import starIcon from '../assets/starred.svg'
 import trashIcon from '../assets/trash.svg'
