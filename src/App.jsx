@@ -1,10 +1,11 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import './App.css'
 import NoteCard from './components/NoteCard'
 import Nav from './components/Nav'
 import SearchBar from './components/SearchBar'
 import Keyboard from './components/Keyboard'
 import NotePage from './components/NotePage'
+import NoteList from './components/NoteList'
 import notesData from './data/notesData'
 import leftCorner from './assets/left-corner.png'
 import rightCorner from './assets/right-corner.png'
@@ -14,12 +15,14 @@ function App() {
     return a.order - b.order;
   })
   const [allNotes, setAllNotes] = useState(sortedNotes || []);
-  const [noteToOpen, setNoteToOpen] = useState([]);
+  const [noteToOpen, setNoteToOpen] = useState([]); 
 
   /* Updates numStar for a note when the note's star rating changes in StarRating */
-  const updateNumStars = (noteDataID, newStarCount) => {
+  const updateNumStars = (noteID, newStarCount) => {
     const updatedNotes = allNotes.map(noteData => {
-      if (noteData.id === noteDataID) {
+      if (noteData.id === noteID) {
+        console.log("noteID: " + noteID);
+        console.log("numStars: " + noteData.numStars)
         return {...noteData, numStars: newStarCount}
       } else {
         return noteData;
@@ -35,6 +38,20 @@ function App() {
       return noteData.title.toLowerCase().includes(trimmedQuery) || noteData.content.toLowerCase().includes(trimmedQuery)
     });
     setAllNotes(filteredNotes);
+  }
+
+  /* Opens note */
+  function openNote(noteData) {
+    setNoteToOpen(noteData);
+    console.log(noteToOpen.numStars);
+    const notePage = document.getElementById("note-page");
+    notePage.style.transform = "translateX(-100%)";
+  }
+
+  /* Closes note */
+  function closeNote() {
+    const notePage = document.getElementById("note-page");
+    notePage.style.transform = "translateX(0%)";
   }
 
   /* Pull up keyboard if input area tapped */
@@ -64,17 +81,6 @@ function App() {
     document.documentElement.style.setProperty('--vh100', `${vh100}px`);
   }
 
-  function openNote(note) {
-    const notePage = document.getElementById("note-page");
-    notePage.classList.add("active");
-    setNoteToOpen(note);
-  }
-
-  function closeNote() {
-    const notePage = document.getElementById("note-page");
-    notePage.classList.remove("active");
-  }
-
   setWidthHeight();
   window.addEventListener('resize', setWidthHeight);
 
@@ -94,20 +100,9 @@ function App() {
         <div id="screen-overlay" onClick={hideKeyboard}></div>
       </header>
 
-      <main className="notes-list">
-          {allNotes.map(noteData => (
-            <NoteCard 
-              key={noteData.id} 
-              noteData={noteData}
-              onCardClick={openNote}
-            />
-          ))}
-      </main>
-      
+      <NoteList allNotes={allNotes} onNoteOpen={openNote}/>
       <Nav />
-
-      <NotePage noteData={noteToOpen} onBackClick={closeNote} onStarRatingChange={(newStarCount) => updateNumStars(noteData.id, newStarCount)}/>
-
+      <NotePage noteData={noteToOpen} onBackClick={closeNote} onStarRatingChange={(noteID, newStarCount) => updateNumStars(noteID, newStarCount)}/>
       <Keyboard />
     </>
   )

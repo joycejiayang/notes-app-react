@@ -2,17 +2,12 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    padding: 24px 32px 24px 24px;
+    padding: 24px;
     background-color: white;
     top: 0;
     left: 100%;
     transition: transform 750ms ease;
-    transform: translateX(0);
     z-index: 10000;
-}
-
-#note-page.active {
-    transform: translateX(-100%);
 }
 
 .note-page-header {
@@ -23,13 +18,15 @@
 
 .back-btn {
     background-color: transparent;
+    color: black;
     border: none;
     font-size: 14px;
     cursor: pointer;
 }
 
 #note-page h2 {
-    margin: 10px 0;
+    margin-top: 10px;
+    margin-bottom: 4px;
 }
 
 #note-page time {
@@ -38,7 +35,8 @@
 }
 
 #note-content {
-    margin-top: 25px;
+    margin-top: 22px;
+    padding-right: 8px;
 }
 
 #note-content ol, #note-content ul {

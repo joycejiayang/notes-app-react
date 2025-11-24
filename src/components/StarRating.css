@@ -3,10 +3,15 @@
 }
 
 .stars > img {
-    /* padding: 3px; */
     transform: scale(75%);
+    margin-left: -2px;
 }
 
-.stars > img:hover {
-    /* cursor: pointer; */
+.stars.note-editor > img {
+    transform: scale(85%);
+    margin-left: 2px;
+}
+
+.stars.note-editor > img:hover {
+    cursor: pointer;
 }
